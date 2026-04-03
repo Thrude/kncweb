@@ -1,0 +1,139 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+  :root {
+    --text: #1a1a18;
+    --muted: #777770;
+    --border: #e0deda;
+    --bg: #f9f7f4;
+  }
+ 
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #e8e6e1;
+      --muted: #888880;
+      --border: #2e2e2a;
+      --bg: #2a2a28;
+    }
+  }
+ 
+  body {
+    font-family: 'EB Garamond', Georgia, serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.75;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+ 
+  a {
+    color: #869aa7;
+    text-decoration: underline;
+    text-decoration-color: var(--border);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.15s;
+  }
+  a:hover { text-decoration-color: var(--muted); }
+ 
+  nav {
+    margin-bottom: 3rem;
+    font-size: 17px;
+  }
+ 
+  .name {
+    font-weight: 400;
+    text-decoration: none;
+  }
+  .name:hover { text-decoration: none; }
+ 
+  h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 2.5rem 0 0.5rem;
+  }
+ 
+  p { margin-bottom: 0.6rem; }
+  p:last-child { margin-bottom: 0; }
+
+ 
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+ 
+  .post-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.2rem 0;
+  }
+ 
+  .post-item a { font-size: 17px; }
+ 
+  .post-date {
+    font-size: 17px;
+    color: var(--muted);
+    white-space: nowrap;
+    text-decoration: none;
+  }
+ 
+  .project-item {
+    padding: 0.2rem 0;
+  }
+ 
+  .project-desc {
+    color: var(--muted);
+    font-size: 17px;
+    font-style: italic;
+  }
+
+  .ascii-art {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    font-family: 'DM Mono', 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.2;
+    color: var(--muted);
+    opacity: 0.4;
+    white-space: pre;
+    pointer-events: none;
+    user-select: none;
+  }
+
+ h1 {
+  font-weight: 400;
+}
+
+
+#quote {
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* --- Footer --- */
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+
+        @media (max-width: 600px) {
+            .hero { font-size: 1.2rem; }
+            .file-title { font-size: 1rem; }
+        }
+    
